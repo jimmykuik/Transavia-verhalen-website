@@ -5,27 +5,204 @@
     <meta charset="UTF-8">
     <title>Transavia | Verhalen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <link rel="stylesheet" href="css/style.css"> </head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
 <body>
     <header>
         <nav>
             <a href="index.html"> <img src="img/transavia-logo.svg" alt="Transavia Logo"> </a>
             <ul>
-                <li> <a href="zoeken.html">Zoeken</a> </li>
+                <li><a>Zoeken & filteren</a></li>
             </ul>
             <ul>
-                <li><a href="login.html">Inloggen</a></li>
-                <li><a href="register.html">Account maken</a></li>
+                <li><a href="login_register.html">Inloggen / Account maken</a></li>
             </ul>
         </nav>
     </header>
-    <section alt "Zoeken">
-        <form action="resultaten.html">
-            <h1>Wat wil je lezen?</h1>
-            <input type="text" name="zoeken" placeholder="Zoek op titel, auteur of genre">
-            <input type="button" value="Zoeken"> <a href="uitgebreid-zoeken.html">Uitgebreid zoeken</a> </form>
+    <section class="search">
+        <form action="" class="filter filterClosed">
+            <legend>Wat wil je lezen?</legend>
+            <fieldset class="inputBefore">
+                <legend class="keywordBefore">Trefwoord</legend>
+                <input type="text" name="zoeken" placeholder="Zoek op titel, auteur of genre" class="inputBefore">
+            </fieldset>
+<!--
+            <fieldset class="checkboxesBefore">
+                <legend class="genresBefore">Genre</legend>
+                <label for="checkboxFirst">
+                    <input type="checkbox" name="checkboxFirst" id="checkboxFirst" value="waargebeurd">
+                    Waargebeurd
+                </label>
+                <label for="checkboxSecond">
+                    <input type="checkbox" name="checkboxSecond" id="checkboxSecond" value="kort">
+                    Kort
+                </label>
+                <label for="checkboxThird">
+                    <input type="checkbox" name="checkboxThird" id="checkboxThird" value="spanning">
+                    Spanning
+                </label>
+                <label for="checkboxFourth">
+                    <input type="checkbox" name="checkboxFourth" id="checkboxFourth" value="avontuur">
+                    Avontuur
+                </label>
+                <label for="checkboxFifth">
+                    <input type="checkbox" name="checkboxFifth" id="checkboxFifth" value="humor">
+                    Humor
+                </label>
+                <label for="checkboxSixth">
+                    <input type="checkbox" name="checkboxSixth" id="checkboxSixth" value="serieus">
+                    Serieus
+                </label>
+                <label for="checkboxSeventh">
+                    <input type="checkbox" name="checkboxSeventh" id="checkboxSeventh" value="andere vorm">
+                    Andere vorm
+                </label>
+                <label for="checkboxEighth">
+                    <input type="checkbox" name="checkboxEighth" id="checkboxEighth" value="grof">
+                    Grof
+                </label>
+            </fieldset>
+            <fieldset class="levelBefore">
+                <legend>Niveau</legend>
+                <input type="range" name="niveau" value="0" min="0" max="2">
+                <div>
+                    <p>Makkelijk</p>
+                    <p>Gemiddeld</p>
+                    <p>Moeilijk</p>
+                </div>
+            </fieldset>
+            <input type="button" value="Zoeken" class="searchBefore">
+-->
+            <a class="filterBefore">Filteropties weergeven</a>
+        </form>
     </section>
+    <main>
+        <div class="medereizigers">
+<!--            <section id="test"></section>-->
+            <section>
+                <h1>Keuze van medereizigers</h1>
+                <article>
+                    <figure>
+                        <img src="img/Verhalen/58-minibe-2.jpg" alt="Verhaalkeuze van medereizigers">
+                        <h2>95% <br>waardering</h2>
+                    </figure>
+                    <aside>
+                        <article>
+                            <h1>Bejaard</h1>
+                            <p>De chauffeur kijkt verveeld maar vooral ook licht geïrriteerd via zijn achteruitkijkspiegel toe hoe ik samen met mijn kleinzoon, die in zijn kinderwagen ligt te slapen, bus 21 uitstap. Waar die lichte irritatie vandaan komt weet ik niet, want dit is de eindhalte, de goede man hoeft de komende twintig minuten nergens naartoe. Het zal […]</p>
+                            <aside>
+                                <img src="img/Iconen/reader-512.png" alt="Genre avontuur">
+                                <img src="img/Iconen/12.png" alt="Niveau 12+">
+                            </aside>
+                            <input type="button" value="Verder lezen">
+                        </article>
+                    </aside>
+                </article>
+            </section>
+        </div>
+        <section>
+            <h1>Verhalen overzicht</h1>
+            <form action="">
+                <h2>Sorteren op:</h2>
+                <h2>Waardering:</h2>
+                <select name="Waardering">
+                    <option value="Hoog naar laag">Hoog naar laag</option>
+                    <option value="Laag naar hoog">Laag naar hoog</option>
+                </select>
+                <h2>Alfabetisch:</h2>
+                <select name="Alfabetisch">
+                    <option selected value="A-Z">A-Z</option>
+                    <option value="Z-A">Z-A</option>
+                </select>
+            </form>
+            <main>
+                <article>
+                    <figure>
+                        <img src="img/Verhalen/worstelingomwatenw.jpg" alt="Verhaal moe">
+                    </figure>
+                    <h2>87% <br>waardering</h2>
+                    <header>
+                        <h1>Moe</h1>
+                    </header>
+                    <p>
+                        De chauffeur kijkt verveeld maar vooral ook licht geïrriteerd via zijn achteruitkijkspiegel toe hoe ik samen met mijn kleinzoon, die in zijn kinderwagen ligt te slapen, bus 21 uitstap. Waar die lichte irritatie vandaan komt weet ik niet, want dit is de eindhalte, de goede man hoeft de komende twintig minuten nergens naartoe. Het zal […]
+                    </p>
+                    <footer>
+                        <input type="button" value="Verder lezen">
+                    </footer>
+                    <aside>
+                        <img src="img/Iconen/reader-512.png" alt="Genre avontuur">
+                        <img src="img/Iconen/12.png" alt="Niveau 12+">
+                    </aside>
+                </article>
+                <article>
+                    <figure>
+                        <img src="img/Verhalen/%20ltt-peterkirn.jpg" alt="Verhaal de verwarde man">
+                    </figure>
+                    <h2>79% <br>waardering</h2>
+                    <header>
+                        <h1>De verwarde man</h1>
+                    </header>
+                    <p>
+                        De chauffeur kijkt verveeld maar vooral ook licht geïrriteerd via zijn achteruitkijkspiegel toe hoe ik samen met mijn kleinzoon, die in zijn kinderwagen ligt te slapen, bus 21 uitstap. Waar die lichte irritatie vandaan komt weet ik niet, want dit is de eindhalte, de goede man hoeft de komende twintig minuten nergens naartoe. Het zal […]
+                    </p>
+                    <footer>
+                        <input type="button" value="Verder lezen">
+                    </footer>
+                    <aside>
+                        <img src="img/Iconen/reader-512.png" alt="Genre avontuur">
+                        <img src="img/Iconen/12.png" alt="Niveau 12+">
+                    </aside>
+                </article>
+                <article>
+                    <figure>
+                        <img src="img/Verhalen/seisme.jpg" alt="Verhaal boers">
+                    </figure>
+                    <h2>72% <br>waardering</h2>
+                    <header>
+                        <h1>Boers</h1>
+                    </header>
+                    <p>
+                        De chauffeur kijkt verveeld maar vooral ook licht geïrriteerd via zijn achteruitkijkspiegel toe hoe ik samen met mijn kleinzoon, die in zijn kinderwagen ligt te slapen, bus 21 uitstap. Waar die lichte irritatie vandaan komt weet ik niet, want dit is de eindhalte, de goede man hoeft de komende twintig minuten nergens naartoe. Het zal […]
+                    </p>
+                    <footer>
+                        <input type="button" value="Verder lezen">
+                    </footer>
+                    <aside>
+                        <img src="img/Iconen/reader-512.png" alt="Genre avontuur">
+                        <img src="img/Iconen/12.png" alt="Niveau 12+">
+                    </aside>
+                </article>
+                <article>
+                    <figure>
+                        <img src="img/Verhalen/ltt-6-2-rgb-flaechig-s.jpg" alt="Verhaal zombie">
+                    </figure>
+                    <h2>70% <br>waardering</h2>
+                    <header>
+                        <h1>Zombie</h1>
+                    </header>
+                    <p>
+                        De chauffeur kijkt verveeld maar vooral ook licht geïrriteerd via zijn achteruitkijkspiegel toe hoe ik samen met mijn kleinzoon, die in zijn kinderwagen ligt te slapen, bus 21 uitstap. Waar die lichte irritatie vandaan komt weet ik niet, want dit is de eindhalte, de goede man hoeft de komende twintig minuten nergens naartoe. Het zal […]
+                    </p>
+                    <footer>
+                        <input type="button" value="Verder lezen">
+                    </footer>
+                    <aside>
+                        <img src="img/Iconen/reader-512.png" alt="Genre avontuur">
+                        <img src="img/Iconen/12.png" alt="Niveau 12+">
+                    </aside>
+                </article>
+            </main>
+        </section>
+    </main>
+    <footer>
+        <div class="content">
+            <p>© Transavia - 2018</p>
+            <a href="index.html"> <img src="img/transavia-logo.svg" alt="Transavia Logo"> </a>
+        </div>
+    </footer>
+    <script src="js/zoeken-show-hide.js"></script>
 </body>
 
 </html>
