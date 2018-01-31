@@ -1,0 +1,239 @@
+/* General page */
+
+@font-face {
+    font-family: nexa;
+    font-weight: normal;
+    font-style: normal;
+    src: url("../fonts/Nexa-Regular.woff") format("woff"), url("../fonts/Nexa-Regular.tff") format("truetype");
+}
+
+@font-face {
+    font-family: nexa bold;
+    font-weight: bold;
+    font-style: bold;
+    src: url("../fonts/Nexa-XBold.woff") format("woff"), url("../fonts/Nexa-XBold.tff") format("truetype");
+}
+
+* {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    margin-top: 3.4em;
+    max-width: 100%;
+    font-size: 100%;
+}
+
+
+
+
+
+/* Navigation bar */
+
+nav {
+    top: 0;
+    width: 100%;
+    height: 2.6em;
+    display: flex;
+    flex-flow: row nowrap;
+    color: #00d66c;
+    background-color: white;
+    box-shadow: 0em .2em .5em rgba(0, 0, 0, 0.18);
+    justify-content: space-between;
+    align-items: center;
+    font-family: nexa bold;
+    font-size: 1.3rem;
+    position: fixed;
+}
+
+nav a:nth-of-type(1) > img {
+    margin-left: 1rem;
+    align-items: center;
+    height: 1.4em;
+    padding-top: .1em;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    list-style: none;
+    flex-grow: 2;
+    margin: 0 1rem 0 0;
+    font-family: nexa;
+    font-size: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+nav ul li {
+    margin-left: 1.2rem;
+}
+
+nav ul li a {
+    color: #00d66c;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #17039d;
+    text-decoration: none;
+}
+
+
+
+
+
+/* Main */
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+main > div:nth-of-type(1) {
+    background-image: url(../img/Verhalen/Eigen/Chaos/Desktop.jpg);
+    background-repeat: no-repeat;
+    height: 210rem;
+    width: 80rem;
+    align-self: center;
+}
+
+main > div:nth-of-type(2) {
+    background-color: rgb(252, 236, 215);
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+}
+
+div section {
+    width: 80em;
+}
+
+section h1 {
+    margin: 2rem 0 1.5rem 0;
+    font-family: nexa bold;
+    font-size: 2rem;
+    color: #17039d;
+}
+
+section > div {
+    display: flex;
+    align-items: center;
+}
+
+section > div > div {
+    display: inline-block;
+    margin-right: 1rem;
+    text-align: center;
+}
+
+section > div > div:nth-of-type(3) {
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+}
+
+section img {
+    width: 5rem;
+}
+
+section div p {
+    margin-top: .5rem;
+    font-family: nexa bold;
+    font-size: 1.3rem;
+    color: #00d66c;
+}
+
+section div:nth-of-type(2) > p {
+    color: rgb(235, 66, 105);
+}
+
+section h2 {
+    display: inline-block;
+    font-family: nexa bold;
+    font-size: 1.3rem;
+    color: #17039d;
+    text-align: center;
+    margin: 0 1rem;
+}
+
+h3 {
+    display: inline-block;
+    text-align: center;
+    font-family: nexa;
+    color: white;
+    font-size: 2.5rem;
+    background-color: #00d66c;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+
+/* Footer */
+
+body > footer {
+    background-color: #f7f7f7;
+    width: 100%;
+}
+
+.content {
+    padding: 1rem 5rem;
+    display: flex;
+    color: black;
+    max-width: 90rem;
+    justify-content: space-between;
+    align-items: center;
+    font-family: nexa;
+    margin: 0 auto;
+}
+
+
+
+
+/* Breakpoints */
+
+@media (max-width: 81em) {
+
+    main > div:nth-of-type(1) {
+        background-image: url(../img/Verhalen/Eigen/Chaos/Tablet.jpg);
+        width: 56.5rem;
+        height: 205rem;
+    }
+
+    div section {
+        width: 56.5em;
+    }
+
+}
+
+
+
+@media (max-width: 57.3125em) {
+
+    main > div:nth-of-type(1) {
+        background-image: url(../img/Verhalen/Eigen/Chaos/Mobile.jpg);
+        width: 40.5rem;
+        height: 222rem;
+    }
+
+    div section {
+        width: 40.5rem;
+    }
+
+}
+
+
+
+@media (max-width: 43.5em) {
+
+    div section {
+        margin: 0 1rem;
+    }
+
+}

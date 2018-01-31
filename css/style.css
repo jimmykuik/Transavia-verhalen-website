@@ -50,7 +50,7 @@ nav {
     position: fixed;
 }
 
-nav img {
+nav a:nth-of-type(1) > img {
     margin-left: 1rem;
     align-items: center;
     height: 1.4em;
@@ -111,23 +111,26 @@ nav ul li a:hover {
 
 /* Search/filter section */
 
-form > legend:nth-of-type(1) {
+form fieldset:nth-of-type(1) legend:nth-of-type(1) {
     font-family: nexa bold;
     font-size: 2.2rem;
     color: #00d66c;
-    padding: 2rem 1.5rem 0rem 1.5rem;
+    padding: 1.5rem 0 0 2rem;
+}
+
+form fieldset:nth-of-type(1) legend:nth-of-type(2) {
+    margin-left: 0rem;
 }
 
 form fieldset:nth-of-type(1) {
     display: flex;
     border: none;
-    width: 20rem;
     margin-top: 1rem;
-    justify-content: center;
+    width: 21rem;
 }
 
 form fieldset:nth-of-type(1) input {
-    width: 20rem;
+    width: 21rem;
 }
 
 form fieldset:nth-of-type(1) input:focus {
@@ -139,13 +142,13 @@ form fieldset:nth-of-type(1) input:focus {
 }
 
 form.filter > input.searchBefore {
-    width: 8rem;
-    padding: .3rem;
+    width: 10rem;
+    padding: .8rem;
     background-color: rgb(235, 66, 105);
     color: white;
     font-family: nexa bold;
     font-size: 1rem;
-    border-radius: 1rem;
+    border-radius: 5rem;
 }
 
 form.filter > a.filterBefore {
@@ -160,7 +163,7 @@ form.filter > a.filterBefore::before {
     font-size: 1.5rem;
 }
 
-body > section {
+body > div {
     background-image: url(../img/3e1c0b4a65c40b787c494d1ec8fdf880.jpg);
     background-size: cover;
     background-position: left;
@@ -168,7 +171,7 @@ body > section {
     opacity: 0;
 }
 
-body > section.active {
+body > div.active {
     overflow: hidden;
     height: auto;
     opacity: 1;
@@ -176,7 +179,7 @@ body > section.active {
     transition: all 1s;
 }
 
-body > section > form {
+body > div > form {
     display: flex;
     flex-direction: column;
     width: 25em;
@@ -188,15 +191,15 @@ body > section > form {
     border-radius: 1rem;
 }
 
-body > section > form.filterClosed {
+body > div > form.filterClosed {
     height: auto;
     justify-content: space-between;
 }
 
 form fieldset:nth-of-type(1) input {
-    margin-top: 1.65rem;
+    margin: 1.65rem 0 0 0rem;
     padding: 1rem 0rem 1rem 1rem;
-    width: 85%;
+    width: 21.5rem;
     font-family: nexa;
     font-size: 1rem;
     border-radius: 1rem;
@@ -205,13 +208,14 @@ form fieldset:nth-of-type(1) input {
 
 form.filter > input {
     margin: 1.65rem 0;
-    width: 8rem;
+    width: 10rem;
     padding: .8rem;
     background-color: rgb(235, 66, 105);
     color: white;
     font-family: nexa bold;
     font-size: 1rem;
-    border-radius: 1rem;
+    border-radius: 5rem;
+    border: 0;
 }
 
 form.filter > a {
@@ -226,7 +230,7 @@ form.filter > a::before {
     font-size: .8rem;
 }
 
-form  > fieldset > legend.keywordBefore {
+form > fieldset > legend.keywordBefore {
     visibility: hidden;
     height: 0;
     overflow: hidden;
@@ -240,26 +244,23 @@ form fieldset:nth-of-type(2) > legend.genresBefore {
     display: none;
 }
 
-form  > fieldset > legend {
+form > fieldset legend:nth-of-type(2) {
     font-family: nexa bold;
     align-self: start;
-    margin: 0rem 0 -1rem 0rem;
+    margin: 0rem 0 -1rem 1.4rem;
     font-size: 1rem;
+    padding: 1rem 0 .5rem 0;
 }
 
 form fieldset:nth-of-type(2) > legend {
     font-family: nexa bold;
     align-self: start;
-    margin: 2rem 0 -1rem 1.4rem;
+    margin: 2rem 0 -1rem -1rem;
     font-size: 1rem;
+    padding: 1rem 0 1.5rem 0;
 }
 
-/form fieldset:nth-of-type(2) legend {
-    margin: 0 -1rem;
-    padding-top: 1rem;
-}
-
-form fieldset:nth-of-type(2), form fieldset.checkboxesBefore {
+form fieldset.checkboxesBefore {
     visibility: hidden;
     height: 0;
     overflow: hidden;
@@ -273,53 +274,14 @@ form fieldset:nth-of-type(2) {
     border: none;
 }
 
-form fieldset:nth-of-type(2) input {
-    margin-right: .3rem;
-}
-
-form fieldset:nth-of-type(2) label {
+form fieldset:nth-of-type(2) label input {
     display: block;
-    margin: 0 0 .3rem -1rem;;
+    margin: 0 .3rem .3rem -1rem;
 }
 
-form fieldset:nth-of-type(2) label:nth-of-type(1)::after {
-    content: '(15)';
-    color: rgb(235, 66, 105);
-}
-
-form fieldset:nth-of-type(2) label:nth-of-type(2)::after {
-    content: '(9)';
-    color: rgb(235, 66, 105);
-}
-
-form fieldset:nth-of-type(2) label:nth-of-type(3)::after {
-    content: '(9)';
-    color: rgb(235, 66, 105);
-}
-
-form fieldset:nth-of-type(2) label:nth-of-type(4)::after {
-    content: '(10)';
-    color: rgb(235, 66, 105);
-}
-
-form fieldset:nth-of-type(2) label:nth-of-type(5)::after {
-    content: '(16)';
-    color: rgb(235, 66, 105);
-}
-
-form fieldset:nth-of-type(2) label:nth-of-type(6)::after {
-    content: '(6)';
-    color: rgb(235, 66, 105);
-}
-
-form fieldset:nth-of-type(2) label:nth-of-type(7)::after {
-    content: '(22)';
-    color: rgb(235, 66, 105);
-}
-
-form fieldset:nth-of-type(2) label:nth-of-type(8)::after {
-    content: '(13)';
-    color: rgb(235, 66, 105);
+form fieldset:nth-of-type(2) label > p {
+    display: block;
+    margin: -1.15rem 0 .3rem .3rem;
 }
 
 form fieldset:nth-of-type(3).levelBefore {
@@ -337,22 +299,28 @@ form fieldset:nth-of-type(3) {
     width: 82%;
 }
 
-form.filter fieldset:nth-of-type(2) legend {
+form.filter fieldset:nth-of-type(3) legend {
     margin: 0 -1rem;
     font-family: nexa bold;
 }
 
-form.filter fieldset:nth-of-type(2) input {
+form.filter fieldset:nth-of-type(3) input {
     margin: 0 -1rem;
     font-family: nexa bold;
     width: 110%;
 }
 
-form.filter fieldset:nth-of-type(2) div {
+form.filter fieldset:nth-of-type(3) div {
     display: flex;
     justify-content: space-between;
     margin: 0 -1rem;
     width: 110%;
+}
+
+form.filter fieldset:nth-of-type(3) legend {
+    margin: 0 -1rem;
+    font-family: nexa bold;
+    font-size: 1rem;
 }
 
 
@@ -361,36 +329,50 @@ form.filter fieldset:nth-of-type(2) div {
 
 /* Recommendation of a fellow traveler section */
 
-.medereizigers section > h1 {
+main > div section > h1 {
     margin: 0 0 2rem 0;
     font-family: nexa bold;
     font-size: 2rem;
     color: #17039d;
 }
 
-.medereizigers {
+main > div {
     background-color: rgb(252, 236, 215);
 }
 
-.medereizigers section {
+.medereizigers-animatie {
+    animation: filter 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes filter {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+main > div section {
     margin: 0 auto;
     max-width: 90rem;
     padding: 3rem 5rem;
 }
 
-.medereizigers h1 + article {
+main > div h1 + article {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 2rem;
 }
 
-.medereizigers figure {
+main > div figure {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: repeat(2, 10rem);
 }
 
-.medereizigers figure > h2 {
+main > div figure > h2 {
     grid-column: 1 / span 1;
     justify-self: end;
     text-align: center;
@@ -403,11 +385,12 @@ form.filter fieldset:nth-of-type(2) div {
     margin: 1.5rem;
 }
 
-.medereizigers figure img {
+main > div figure img {
     border-radius: 1.5rem;
     width: 100%;
     height: 20rem;
     object-fit: cover;
+    object-position: 50% 0%;
 }
 
 article aside article {
@@ -448,9 +431,12 @@ aside article img {
     margin-bottom: .7rem;
 }
 
-aside + input {
+aside + a {
     grid-column: 3 / span 1;
     grid-row: 7 / span 1;
+}
+
+aside + a > input {
     width: 10rem;
     padding: .8rem;
     background-color: #17039d;
@@ -458,6 +444,7 @@ aside + input {
     font-family: nexa bold;
     font-size: 1rem;
     border-radius: 5rem;
+    border: 0;
 }
 
 
@@ -473,6 +460,13 @@ main section > h1 {
     font-size: 2rem;
     color: #00d66c;
     margin-bottom: .5rem;
+}
+
+.searchTitleHidden {
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    display: none;
 }
 
 h1 + form {
@@ -505,7 +499,21 @@ main > section {
     margin: 0 auto;
 }
 
-main > section > main{
+.zoekresultaten-omhoog {
+    animation: toTop 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes toTop {
+    0% {
+
+    }
+    100% {
+        margin-top: -30rem;
+    }
+}
+
+main > section > main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 2rem;
@@ -520,6 +528,43 @@ main > section > main > article {
     grid-gap: 1.5rem;
 }
 
+.artikelen-verbergen-animatie {
+    animation: artikelVerbergen 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes artikelVerbergen {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        margin-left: -50rem;
+        display: none;
+        visibility: hidden;
+        width: 0;
+        height: 0;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.artikel-naar-links {
+    animation: articleToLeft 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes articleToLeft {
+    0% {
+        position: relative;
+        left: 0;
+    }
+    100% {
+        position: relative;
+        left: -46rem;
+    }
+}
+
 main > section > main > article > figure {
     grid-column: 1 / span 6;
     grid-row: 1 / span 2;
@@ -530,6 +575,7 @@ main > section > main > article > figure > img {
     height: 20rem;
     width: 100%;
     object-fit: cover;
+    object-position: 50% 0%;
 }
 
 article > header {
@@ -560,7 +606,7 @@ main > section > main > article > aside {
 
 }
 
-footer > input {
+footer > a > input {
     width: 10rem;
     padding: .8rem;
     background-color: rgb(235, 66, 105);
@@ -568,6 +614,7 @@ footer > input {
     font-family: nexa bold;
     font-size: 1rem;
     border-radius: 5rem;
+    border: 0;
 }
 
 aside > img {
@@ -588,12 +635,6 @@ main > section figure + h2 {
     padding: 1.5rem;
     border-radius: 1rem;
     margin: 1.5rem;
-}
-
-
-#test {
-    background-color: black;
-    width: 72em;
 }
 
 
@@ -618,11 +659,8 @@ body > footer {
 
 
 @media (max-width: 82em) {
-    #test {
-        background-color: aqua;
-    }
 
-    .medereizigers section {
+    main > div section {
         max-width: 100rem;
         padding: 3rem 2rem;
     }
@@ -639,13 +677,10 @@ body > footer {
 }
 
 @media (max-width: 76em) {
-    #test {
-        background-color: red;
-    }
 
     article aside article {
         display: grid;
-        grid-template-columns: 5% 10% repeat(2, 1fr) 5%;
+        grid-template-columns: 5% 15% repeat(2, 1fr) 5%;
         grid-template-rows: repeat(8, 1fr);
         height: 20rem;
         grid-gap: 0 1rem;
@@ -671,7 +706,7 @@ body > footer {
 
     aside article aside {
         grid-column: 2 / span 1;
-        justify-self: end;
+        justify-self: start;
     }
 
     aside article img {
@@ -679,9 +714,12 @@ body > footer {
         display: inline;
     }
 
-    aside + input {
+    aside + a {
         grid-column: 2 / span 1;
         grid-row: 7 / span 1;
+    }
+
+    aside + a > input {
         width: 10rem;
         padding: .8rem;
         background-color: #17039d;
@@ -689,5 +727,166 @@ body > footer {
         font-family: nexa bold;
         font-size: 1rem;
         border-radius: 5rem;
+        border: 0;
+    }
+}
+
+@media (max-width: 63em) {
+    main > div h1 + article {
+        display: block;
+    }
+
+    main > div section {
+        padding: 3rem 5rem;
+    }
+
+    article aside article {
+        grid-template-columns: 5% 10% repeat(2, 1fr) 10%;
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    aside article h1 {
+        grid-column: 1 / span 2;
+    }
+
+    aside article p {
+        grid-column: 1 / span 4;
+    }
+
+    aside article aside {
+        grid-column: 5 / span 1;
+        justify-self: end;
+    }
+
+    aside article img {
+        width: 3rem;
+        display: block;
+        margin-bottom: .7rem;
+    }
+
+    aside + a {
+        grid-column: 1 / span 1;
+    }
+
+    main > section {
+        padding: 3rem 5rem 0;
+    }
+
+    main > section > main {
+        display: block;
+    }
+
+    h1 + form {
+        margin: 2rem 0 2rem 0;
+        display: flex;
+        justify-content: flex-start;
+        font-family: nexa;
+    }
+
+    form > h2:nth-of-type(1) {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 50.4em) {
+
+    form > select {
+        margin-left: 0rem;
+        font-size: inherit;
+    }
+
+    form > h2 {
+        display: block;
+        margin: 1rem 0 .5rem 0;
+    }
+
+    h1 + form {
+        display: block;
+        justify-content: flex-end;
+        font-family: nexa;
+    }
+}
+
+@media (max-width: 37.437em) {
+    nav a:nth-of-type(1) > img {
+        visibility: hidden;
+        height: 0;
+        overflow: hidden;
+        display: none;
+    }
+
+    nav a:nth-of-type(2) > img {
+        margin-left: 1rem;
+        align-items: center;
+        height: 1.4em;
+        padding-top: .1em;
+    }
+
+    main > div section {
+        padding: 3rem 2rem;
+    }
+
+    main > section {
+        padding: 3rem 2rem 0;
+    }
+}
+
+@media (max-width: 31.2em) {
+    article aside article {
+        grid-template-columns: 5% 15% repeat(2, 1fr) 5%;
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    aside article aside {
+        grid-column: 1 / span 2;
+        justify-self: start;
+    }
+
+    aside article img {
+        width: 1.5rem;
+        display: inline;
+    }
+
+    aside article h1 {
+        grid-column: 3 / span 2;
+        grid-row: 2 / span 1;
+    }
+
+    aside article p {
+        grid-column: 1 / span 5;
+        grid-row: 3 / span 3;
+    }
+
+    aside + a {
+        grid-column: 1 / span 1;
+        grid-row: 8 / span 1;
+    }
+
+    article > header {
+        grid-column: 2 / span 2;
+    }
+
+    article > p {
+        grid-column: 1 / span 6;
+        grid-row: 4 / span 1;
+    }
+
+    main > section > main > article > aside {
+        grid-column: 1 / span 1;
+        justify-self: start;
+    }
+
+    aside > img {
+        width: 1.5rem;
+        display: inline;
+    }
+
+    main > section > main > article {
+        display: grid;
+        margin-bottom: 3rem;
+        overflow: hidden;
+        grid-template-columns: repeat(5, 1fr) 20%;
+        grid-template-rows: 25% 25% 5% 40% 5%;
+        grid-gap: 1.5rem;
     }
 }

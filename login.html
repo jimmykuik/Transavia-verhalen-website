@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Transavia | Verhalen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html"> <img src="img/transavia-logo.svg" alt="Transavia Logo"> </a>
+            <a href="index.html"> <img src="img/transavia-logo2.svg" alt="Transavia Logo"> </a>
+            <ul>
+                <li><a href="login_register.html">Inloggen / Account maken</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form action="index2.html">
+            <h1>Log in bij Mijn Transavia</h1>
+            <hr>
+            <p>Maak een Mijn Transavia account aan om bijvoorbeeld verhalen te beoordelen.</p>
+            <fieldset>
+                <label for="email">E-mailadres</label>
+                <input id="email" type="email" placeholder="gebruiker@domein.nl" required>
+            </fieldset>
+            <fieldset>
+                <label for="password">Wachtwoord</label>
+                <input id="password" type="password" required>
+            </fieldset>
+            <a href="login.html">Wachtwoord vergeten?</a>
+            <input type="submit" value="Inloggen">
+        </form>
+        <section>
+            <h1>Meld je aan voor Mijn Transavia</h1>
+            <hr>
+            <p>Klik op de knop 'Beginnen' om een persoonlijke Mijn Transavia account aan te maken.</p>
+            <p>Dit duurt hooguit een paar minuten.</p>
+            <input type="button" value="Beginnen">
+        </section>
+        <form action="index2.html" class="hidden">
+            <h1>Meld je aan voor Mijn Transavia</h1>
+            <hr>
+            <fieldset>
+                <label for="name">Roepnaam</label>
+                <input id="name" type="name" placeholder="Hoe mogen we je noemen?" required>
+            </fieldset>
+            <fieldset>
+                <label id="emailNew" for="">E-mailadres</label>
+                <input id="emailNew" type="email" placeholder="gebruiker@domein.nl" required>
+            </fieldset>
+            <fieldset>
+                <label for="passowrdNew">Wachtwoord</label>
+                <input id="passwordNew" type="password" placeholder="Minimaal 8 tekens lang" required>
+            </fieldset>
+            <input type="submit" value="Voltooien">
+            <a href="login.html"><input type="button" value="Terug"></a>
+        </form>
+    </main>
+    <footer>
+        <div class="content">
+            <p>© Transavia - 2018</p>
+            <a href="index.html"> <img src="img/transavia-logo.svg" alt="Transavia Logo"> </a>
+        </div>
+    </footer>
+    <script src="js/micro-interactions.js"></script>
+</body>
+
+</html>
